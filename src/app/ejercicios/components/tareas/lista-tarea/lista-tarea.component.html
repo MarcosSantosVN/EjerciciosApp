@@ -1,0 +1,8 @@
+<h4>Listado</h4>
+<ul class="list-group m-2">
+  <li *ngFor="let tarea of listaTareas" class="list-group-item">
+
+    <app-lista-tarea-item [tarea]="tarea" (onDeleteItem)="onDeleteById($event)"></app-lista-tarea-item>
+
+  </li>
+</ul>

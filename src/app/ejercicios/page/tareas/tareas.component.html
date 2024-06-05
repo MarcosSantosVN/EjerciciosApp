@@ -1,1 +1,11 @@
-<p>tareas works!</p>
+<h1>Lista de tareas</h1>
+
+<div class="row justify-content-between">
+  <div class="col-md-5 col-sm-12 mb-5">
+    <app-tarea-form (onNewTarea)="addTarea($event)"></app-tarea-form>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <app-lista-tarea [listaTareas]="tareas" (onDelete)="deleteTareaById($event)"></app-lista-tarea>
+
+  </div>
+</div>

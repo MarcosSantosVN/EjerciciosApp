@@ -1,0 +1,30 @@
+<h4>Agregar tarea</h4>
+
+
+<form class="row ms-2 me-2" [formGroup]="tareaForm" (ngSubmit)="emitTarea()">
+
+  <mat-form-field>
+    <mat-label>Título</mat-label>
+    <input matInput type="text" required formControlName="titulo">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descripción</mat-label>
+    <textarea matInput placeholder="Descripción" required formControlName="descripcion"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Estado</mat-label>
+    <mat-select required
+    formControlName="estado">
+      <mat-option *ngFor="let estado of estados" [value]="estado.id">
+        {{estado.desc}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <button type="submit" class="btn btn-primary mt-2">Agregar</button>
+
+  <!-- <pre>{{character | json}}</pre> -->
+</form>
