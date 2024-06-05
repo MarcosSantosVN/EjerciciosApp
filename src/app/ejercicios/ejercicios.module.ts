@@ -8,6 +8,11 @@ import { CuentaComponent } from './components/calculadora/cuenta/cuenta.componen
 import { HistorialComponent } from './components/calculadora/historial/historial.component';
 import { LayoutPageComponent } from './page/layout-page/layout-page.component';
 import { SidebarComponent } from '../shared/components/sidebar/sidebar.component';
+import { ListaTareaComponent } from './components/tareas/lista-tarea/lista-tarea.component';
+import { ListaTareaItemComponent } from './components/tareas/lista-tarea-item/lista-tarea-item.component';
+import { TareaFormComponent } from './components/tareas/tarea-form/tarea-form.component';
+import { MaterialModule } from '../material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,11 +23,18 @@ import { SidebarComponent } from '../shared/components/sidebar/sidebar.component
     HistorialComponent,
     TareasComponent,
     LayoutPageComponent,
-    SidebarComponent
+    SidebarComponent,
+    TareasComponent,
+    ListaTareaComponent,
+    ListaTareaItemComponent,
+    TareaFormComponent
   ],
   imports: [
     CommonModule,
-    EjerciciosRoutingModule
+    EjerciciosRoutingModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class EjerciciosModule { }

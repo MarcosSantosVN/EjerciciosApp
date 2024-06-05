@@ -1,0 +1,29 @@
+<div class="row justify-content-between">
+  <strong class="col-md-5 col-xs-12">{{tarea.titulo}} </strong>
+
+  <form class="col-md-7 col-xs-12" [formGroup]="tareaForm">
+    <mat-form-field class="w-100">
+      <mat-label>Estado</mat-label>
+      <mat-select [(ngModel)]="tarea.estado" formControlName="estado">
+        <mat-option *ngFor="let estado of estados" [value]="estado.id">
+          {{estado.desc}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+
+<div class="row border">
+  <span class="p-2">{{tarea.descripcion}}</span>
+</div>
+
+
+
+<div class="row mt-2">
+  <button class="col-md-6 col-xs-12" mat-flat-button (click)="cambiarEstado(tarea.id, tarea.estado)" color="primary">
+    <mat-icon>save</mat-icon>
+  </button>
+
+
+  <button class="btn btn-danger col-md-6 col-xs-12" (click)="onDeleteTarea(tarea.id)">X</button>
+</div>
