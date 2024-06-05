@@ -25,7 +25,7 @@ export class RegisterPageComponent {
 
     this.authService.onRegister(this.user)
 
-    this.router.navigate(['/']);
+    this.router.navigate(['/ejercicios']);
   }
 
 }

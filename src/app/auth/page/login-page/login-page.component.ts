@@ -23,6 +23,6 @@ export class LoginPageComponent {
 
     this.authService.onLogin(this.user.name, this.user.password)
 
-    this.router.navigate(['/']);
+    this.router.navigate(['/ejercicios']);
   }
 }

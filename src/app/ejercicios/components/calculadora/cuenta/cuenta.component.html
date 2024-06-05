@@ -1,0 +1,37 @@
+<div class="row row-no-gutters justify-content-center">
+  <div class="col-12 col-sm-12 col-md-11 col-lg-10 text-right">
+    <input type="text" [value]="cuenta.premisa" class="form-control text-right" placeholder="Ejemplo: 1+1">
+  </div>
+</div>
+
+<div class="row row-no-gutters justify-content-center">
+  <button type="button" (click)="escribir('7', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">7</button>
+  <button type="button" (click)="escribir('8', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">8</button>
+  <button type="button" (click)="escribir('9', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">9</button>
+  <button type="button" (click)="escribir('/', true)" class="col-3 col-sm-3 col-md-2 col-lg-2 btn btn-info border border-black">/</button>
+  <button type="button" (click)="escribir('*', true)" class="col-3 col-sm-3 col-md-2 col-lg-2 btn btn-info border border-black">*</button>
+</div>
+
+<div class="row row-no-gutters justify-content-center">
+  <button type="button" (click)="escribir('4', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">4</button>
+  <button type="button" (click)="escribir('5', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">5</button>
+  <button type="button" (click)="escribir('6', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">6</button>
+  <button type="button" (click)="escribir('+', true)" class="col-3 col-sm-3 col-md-2 col-lg-2 btn btn-info border border-black">+</button>
+  <button type="button" (click)="escribir('-', true)" class="col-3 col-sm-3 col-md-2 col-lg-2 btn btn-info border border-black">-</button>
+</div>
+
+<div class="row row-no-gutters justify-content-center">
+  <button type="button" (click)="escribir('1', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">1</button>
+  <button type="button" (click)="escribir('2', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">2</button>
+  <button type="button" (click)="escribir('3', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">3</button>
+  <button type="button" (click)="escribir('(', false)" class="col-3 col-sm-3 col-md-2 col-lg-2 btn btn-info border border-black">(</button>
+  <button type="button" (click)="escribir(')', false)" class="col-3 col-sm-3 col-md-2 col-lg-2 btn btn-info border border-black">)</button>
+</div>
+
+<div class="row row-no-gutters justify-content-center">
+  <button type="button" (click)="escribir('0', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">0</button>
+  <button type="button" (click)="escribir('.', false)" class="col-2 col-sm-2 col-md-2 col-lg-2 btn btn-primary border border-black">.</button>
+  <button type="button" (click)="calcular()" class=" col-2 col-sm-2 col-md-2 col-lg-2 btn btn-danger border border-black">=</button>
+  <button type="button" (click)="borrar()" class="col-3 col-sm-3 col-md-2 col-lg-2  btn btn-secondary border border-black">Borrar</button>
+  <button type="button" (click)="limpiar()" class="col-3 col-sm-3 col-md-2 col-lg-2 btn btn-secondary border border-black">Limpiar</button>
+</div>

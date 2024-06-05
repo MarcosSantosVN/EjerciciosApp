@@ -16,6 +16,7 @@ export class AuthService {
   }
 
   onLogin(username: string, password: string): void {
+
     if (!localStorage.getItem('token')) return;
 
     const token = JSON.parse(localStorage.getItem('token')!);

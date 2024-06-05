@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cuenta } from '../../components/calculadora/interfaces/cuenta.interface';
 
 @Component({
   selector: 'app-calculadora',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class CalculadoraComponent {
 
+  historial: Cuenta[] = [];
+
+  addHisto(lastCalc: Cuenta) {
+    this.historial.push(lastCalc);
+    console.log(lastCalc.premisa, lastCalc.resultado);
+  }
 }
