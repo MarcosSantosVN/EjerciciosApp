@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CalculadoraComponent } from './page/calculadora/calculadora.component';
 import { TareasComponent } from './page/tareas/tareas.component';
 import { LayoutPageComponent } from './page/layout-page/layout-page.component';
+import { BanderasComponent } from './page/banderas/banderas.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'tarea',
         component: TareasComponent
+      },
+      {
+        path: 'banderas',
+        component: BanderasComponent
       },
       {
         path: '**',

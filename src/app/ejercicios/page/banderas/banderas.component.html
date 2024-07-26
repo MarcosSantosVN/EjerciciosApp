@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+        <h1>Banderas</h1>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col">
+          <!-- SearchBox -->
+          <shared-search-box (onDebounce)="searchByCountry($event)" [initialValue]="initialValue" placeholder="Buscar por capital"></shared-search-box>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col">
+          <hr>
+          <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+      
+          <countries-table [countries]="countries"></countries-table>
+        </div>
+      </div>
