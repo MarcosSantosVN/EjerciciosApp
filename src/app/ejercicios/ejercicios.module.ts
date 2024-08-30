@@ -17,6 +17,8 @@ import { TareasComponent } from './page/tareas/tareas.component';
 import { CountryTableComponent } from './components/country-table/country-table.component';
 import { BanderasComponent } from './page/banderas/banderas.component';
 import { LoadingSpinnerComponent } from '../shared/components/loading-spinner/loading-spinner.component';
+import { ModalComponent } from './components/modal/modal.component';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -35,14 +37,16 @@ import { LoadingSpinnerComponent } from '../shared/components/loading-spinner/lo
     TareasComponent,
     TareasComponent,
     CountryTableComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
     EjerciciosRoutingModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatListModule
   ]
 })
 export class EjerciciosModule { }

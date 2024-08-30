@@ -1,0 +1,18 @@
+<div class="container p-5">
+  <h2>Información del país</h2>
+
+  <p><span class="fw-medium fs-5">Nombre:</span> {{data.nombre}}</p>
+  <p><span class="fw-medium fs-5">Capital:</span> {{data.capital}}</p>
+  <p><span class="fw-medium fs-5">Población:</span> {{data.poblacion|number}} habitantes</p>
+  <p class="fw-medium fs-5">Moneda:</p>
+  <ul>
+    <li *ngFor="let item of data.moneda">{{item[0]}}</li>
+  </ul>
+  <p class="fw-medium fs-5">Idioma:</p>
+  <ul>
+    <li *ngFor="let item of data.idioma">{{item[1]}}</li>
+  </ul>
+
+
+  <button mat-button (click)="onNoClick()" class="btn btn-info">Cerrar</button>
+</div>
